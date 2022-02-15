@@ -5,6 +5,7 @@ const profileRoute = require("./routes/profiles");
 
 const app = express();
 dotenv.config();
+app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
