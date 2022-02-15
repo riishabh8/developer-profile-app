@@ -9,6 +9,7 @@ export default function App() {
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
         <Route path="/profile" element={<Profile />}></Route>
+        {/* <Route path="/profile/:id" element={<Profile />}></Route> */}
         <Route path="/add" element={<AddDevPage />}></Route>
       </Routes>
     </Router>

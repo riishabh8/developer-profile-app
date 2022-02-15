@@ -8,7 +8,8 @@ import buisness from "../assets/Icons _ Illustrations/business-24px.svg";
 import email from "../assets/Profile_Icons/email.svg";
 import { Link } from "react-router-dom";
 
-export default function Profile() {
+export default function Profile(props) {
+  console.log(props.msg);
   return (
     <div className="profile">
       <div className="profileHeader">

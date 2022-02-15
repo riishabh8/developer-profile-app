@@ -4,7 +4,7 @@ const axios = require("axios");
 const { type } = require("express/lib/response");
 
 //Add Profile
-router.post("/api/developers", async (req, res) => {
+router.post("/", async (req, res) => {
   const username = String(req.body.username);
   // username = "rishverse"
   // console.log("In post route");
@@ -46,7 +46,7 @@ router.post("/api/developers", async (req, res) => {
 });
 
 //DELETE Profile
-router.delete("/api/developers/:id", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
     const profile = await Profile.findById(req.params.id);
     try {
@@ -61,7 +61,7 @@ router.delete("/api/developers/:id", async (req, res) => {
 });
 
 //GET Profile
-router.get("/api/developers/:id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     const profile = await Profile.findById(req.params.id);
     res.status(200).json(profile);
@@ -71,7 +71,7 @@ router.get("/api/developers/:id", async (req, res) => {
 });
 
 //GET ALL Profiles
-router.get("/api/developers", async (req, res) => {
+router.get("/", async (req, res) => {
   const data = [];
   try {
     let posts;

@@ -2,6 +2,7 @@
   height: 100px;
   width: 100px;
   margin-right: 50px;
+  border-radius: 50%;
 }
 .itemName {
   font-size: 36px;
