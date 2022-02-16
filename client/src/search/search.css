@@ -1,7 +1,5 @@
 .search {
-  width: 780px;
-  position: relative;
-  display: flex;
+  width: 780px !important;
 }
 
 .searchTerm {
@@ -31,7 +29,7 @@
 
 /*Resize the wrap to see the search bar change!*/
 .wrap {
-  width: 30%;
-  margin: 50px 600px;
+  width: 2%;
+  margin: 50px 25em;
   transform: translate(-50%, -50%);
 }

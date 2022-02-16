@@ -19,8 +19,9 @@
   height: 400px;
   width: 400px;
   position: relative;
-  top: -50px;
-  margin-left: 100px;
+  top: -1.5em;
+  margin:10px 100px;
+  border-radius: 50%;
 }
 .devDes {
   margin-top: 100px;

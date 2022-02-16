@@ -2,10 +2,16 @@ const router = require("express").Router();
 const Profile = require("../models/profiles");
 const axios = require("axios");
 const { type } = require("express/lib/response");
+const twilio = require("twilio");
 
 //Add Profile
 router.post("/", async (req, res) => {
-  const username = String(req.body.username);
+  const username = String(req.body.github),
+    linkedin_id = `http://linkedin.com/in/${req.body.linkedin}`,
+    codechef_id = `http://codechef.com/${req.body.codechef}`,
+    hackerrank_id = `http://hackerrank.com/${req.body.hackerrank}`,
+    twitter_id = `http://twitter.com/${req.body.twitter}`,
+    medium_id = `http://medium.com/${req.body.medium}`;
   // username = "rishverse"
   // console.log("In post route");
   // console.log(req.body)
@@ -27,11 +33,11 @@ router.post("/", async (req, res) => {
       email: val.email,
       bio: val.bio,
       github_id: val.html_url,
-      linkedin_id: "",
-      codechef_id: "",
-      hackerrank_id: "",
-      twitter_id: "",
-      medium_id: "",
+      linkedin_id: linkedin_id,
+      codechef_id: codechef_id,
+      hackerrank_id: hackerrank_id,
+      twitter_id: twitter_id,
+      medium_id: medium_id,
       repoUrl: val.repos_url,
     });
 
